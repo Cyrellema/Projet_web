@@ -41,18 +41,9 @@ $dbh = new PDO($dsn, $username, $password) or die("Pb de connexion !");
     </select>
     </label>
     <label> Prix maximum
-    <input type="text" id="prixMax" class="prixMax" onkeypress="return runScript(event)" name="prix maximum"/>
+    <input type="text" id="prixMax" class="prixMax" name="prix maximum"/>
       <input type="submit" id="valider" value="validez" class="validez"/>
     <select name="prix maximum">
-       <script>
-          document.getElementById("prixMax")
-          .addEventListener("keyup", function(event){
-             event.preventDefault();
-             if(event.keyCode === 13){
-                document.getElementById("valider").click();
-             }
-          });
-          </script>
     <?php
     if (isset($_POST['prix'])){
        $sql='select produits from produits where prix <="'.$_POST['prix'].'"';

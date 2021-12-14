@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
+    <header>
+    <link rel="stylesheet" href="index.css" />
+</header>
 <?php
 $dsn = 'mysql:host=localhost;dbname=projet_web;charset=UTF8';
    $username ='root';
    $password ='';
    $dbh = new PDO($dsn, $username, $password) or die("Pb de connexion !");
 ?>
+
 <?php
 session_start();
 include_once("fonction_panier.php");
@@ -72,17 +76,23 @@ echo '<?xml version="1.0" encoding="utf-8"?>';?>
 </head>
 <body>
 
-<form method="post" action="panier.php">
-<table style="width: 400px">
-    <tr>
-        <td colspan="4">Votre panier</td>
-    </tr>
-    <tr>
-        <td>id du Produit</td>
-        <td>Quantité</td>
-        <td>Montant</td>
-        <td>Action</td>
-    </tr>
+<form method="get" action="panier.php">
+
+
+<!-- pour du css -->
+<div class = "panier">
+    panier
+</div>
+<table>   
+<tr>
+   <td> nom </td>
+   <td> photo </td>
+   <td> prix </td>
+   <td> quantité </td>
+   <td> montant </td>
+   <td> actions </td>
+</tr>
+
 
 
     <?php
@@ -105,7 +115,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';?>
 
           echo "<tr><td colspan=\"2\"> </td>";
           echo "<td colspan=\"2\">";
-          echo "Total : ".MontantGlobal();
+          echo "Total : ".$enr['montant'];
           echo "</td></tr>";
 
           echo "<tr><td colspan=\"4\">";
@@ -117,6 +127,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';?>
     }
     ?>
 </table>
+<input type = "submit" class="validez" value="passer la commande" name="commander">
 </form>
 </body>
 </html>

@@ -17,7 +17,7 @@ function creationlignescommandes(){
 function ajouterArticle($idProduit,$quantite,$montant){
 
 //Si le lignescommandes existe
-if (creationlignescommandes())// && !isVerrouille())
+if (creationlignescommandes())
 {
    //Si le produit existe déjà on ajoute seulement la quantité
    $positionProduit = array_search($idProduit,  $_SESSION['lignescommandes']['idProduit']);
@@ -40,21 +40,13 @@ echo "Un problème est survenu veuillez contacter l'administrateur du site.";
 
 
 
-/**
-* Modifie la quantité d'un article
-* @param $libelleProduit
-* @param $qteProduit
-* @return void
-*/
+
 function modifierQTeArticle($idProduit,$quantite){
 //Si le lignescommandesexiste
-if (creationlignescommandes())// && !isVerrouille())
+if (creationlignescommandes())
 {
-   //Si la quantité est positive on modifie sinon on supprime l'article
    if ($qteProduit > 0)
    {
-      //Recharche du produit dans le lignescommandes
-
       $positionProduit = array_search($idProduit,  $_SESSION['lignescommandes']['idProduit']);
 
       if ($positionProduit !== false)
@@ -66,25 +58,18 @@ if (creationlignescommandes())// && !isVerrouille())
    supprimerArticle($idProduit);
 }
 else
-echo "Un problème est survenu veuillez contacter l'administrateur du site.";
+echo "Un problème est survenu.";
 }
 
-/**
-* Supprime un article du lignescommandes
 
-* @param $libelleProduit
-* @return unknown_type
-*/
 function supprimerArticle($idProduit){
 //Si le lignescommandes existe
-if (creationlignescommandes ()) //&& !isVerrouille())
+if (creationlignescommandes ()) 
 {
-   //Nous allons passer par un lignescommandestemporaire
    $tmp=array();
    $tmp['idProduit'] = array();
    $tmp['quantite'] = array();
    $tmp['montant'] = array();
-   //$tmp['verrou'] = $_SESSION['lignescommandes']['verrou'];
 
    for($i = 0; $i < count($_SESSION['lignescommandes']['idProduit']); $i++)
    {
@@ -124,30 +109,13 @@ return $total;
 
 /**
 * Fonction de suppression du lignescommandes
-
-* @return void
 */
 function supprimelignescommandes(){
 unset($_SESSION['lignescommandes']);
 }
 
 /**
-* Permet de savoir si le lignescommandes
- est verrouillé
-* @return booleen
-
-function isVerrouille(){
-if (isset($_SESSION['lignescommandes']) && $_SESSION['lignescommandes']['verrou'])
-return true;
-else
-return false;
-}
-*/
-
-/**
 * Compte le nombre d'articles différents dans le lignescommandes
-
-* @return int
 */
 function compterArticles()
 {

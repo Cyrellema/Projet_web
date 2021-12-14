@@ -17,17 +17,8 @@
          Login
          <input type="text" class="login" name="login" placeholder="login"/>
          Password
-         <input type="password" class="password" name="password" onkeypress="return runScript(event)"  placeholder="password"/>
+         <input type="password" class="password" name="password" placeholder="password"/>
          <input type="submit" id="valider" class="validez" value="validez" />
-         <script>
-           document.getElementById("prixMax")
-           .addEventListener("keyup", function(event){
-              event.preventDefault();
-              if(event.keyCode === 13){
-                 document.getElementById("valider").click();
-              }
-           });
-           </script>
            <a href="creation_compte.php">creation compte</a>
       
          <form action="panier.php" method="GET">
@@ -50,18 +41,9 @@
    </label>
    <br/>
    <label> Prix maximum
-      <input type="text" id="prixMax" class="prixMax" onkeypress="return runScript(event)" name="prix maximum"/>
+      <input type="text" id="prixMax" class="prixMax" name="prix maximum"/>
       <input type="submit" id="valider" value="validez" class="validez"/>
     <select name="prix maximum">
-       <script>
-          document.getElementById("prixMax")
-          .addEventListener("keyup", function(event){
-             event.preventDefault();
-             if(event.keyCode === 13){
-                document.getElementById("valider").click();
-             }
-          });
-          </script>
    <label/>
    
 

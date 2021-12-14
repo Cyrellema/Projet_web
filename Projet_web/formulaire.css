@@ -37,3 +37,20 @@ body {
     border: medium solid #37b1ab;
     border-radius: 30px;
 }
+
+.panier{
+    position: center center;
+    margin-left: 45%;
+    font: 30pt bolder;
+}
+
+table, td {
+        border-collapse: collapse;
+        width: 100%;
+        border: solid black 1px;
+        vertical-align: bottom;
+        text-align: left;
+        height: auto;
+        table-layout: fixed;
+}
+

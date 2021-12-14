@@ -1,54 +1,31 @@
 <!doctype html>
 <html>
-  <head>
-   <title> </title> 
-   <meta charset="UTF-8"/> 
-</head>  
-<meta charset="UTF8" />
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title> SuperMagical Electronique </title>
-     <link rel="stylesheet" href="index.css" />
-</head> 
 
-  <body>
-     <label>
-      <form action="localhost:8888/connexion.php" method="GET">
-         Login
-         <input type="text" class="login" name="login" placeholder="login"/>
-         Password
-         <input type="password" class="password" name="password" placeholder="password"/>
-         <input type="submit" id="valider" class="validez" value="validez" />
-           <a href="creation_compte.php">creation compte</a>
-      
-         <form action="panier.php" method="GET">
-</br>
+<head>
+   <meta charset="UTF8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>SuperMagical Electronique </title>
+   <link rel="stylesheet" href="formulaire.css" />
+   <link rel="stylesheet" href="nav.css">
+</head>
 
-   </label>
-     <center>
-        <p><b>SuperMagical Electronique</b></p>
-     </br>
-     <form action="http://localhost:8888/recherche.php" method="GET">
-  <br/>
-  <label> Marque 
-   <select name='marque'>
-   </select>
-   <br/>
-   </label>
-   <label> Catégorie
-   <select name='catégorie'>
-   </select>
-   </label>
-   <br/>
-   <label> Prix maximum
-      <input type="text" id="prixMax" class="prixMax" name="prix maximum"/>
-      <input type="submit" id="valider" value="validez" class="validez"/>
-    <select name="prix maximum">
-   <label/>
-   
+<body>
+   <center>
+      <p><b>SuperMagical Electronique</b></p></br>
+      <div id="nav">
+         <div>
+            <ul>
+               <li><a href="listeProduits.php" class="bg1">Produits</a></li>
+               <li><a href="#" class="bg2">Panier</a></li>
+               <li><a href="demo4.php" class="bg3">Recherche</a></li>
+               <li><a href="#" class="bg4">Commande</a></li>
+               <li><a href="creation_compte.html" class="bg5">Compte</a></li>
+               <li><a href="login.html" class="bg6">Login</a></li>
+            </ul>
+         </div>
+      </div>
+</body>
+</center>
 
-        <br/> 
-     </center>
-   </form>
-  </body>
 </html>

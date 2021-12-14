@@ -1,0 +1,39 @@
+body {
+    font-size: 18pt;
+    margin-left: auto;
+    margin-right: auto;
+    color: #37b1ab;
+    background-color: rgb(87, 86, 141);
+
+}
+
+#nav {
+    overflow: hidden;
+}
+
+#nav>div {
+    position: relative;
+    left: 50%;
+    float: left;
+}
+
+#nav ul {
+    position: relative;
+    left: -50%;
+    float: left;
+}
+
+#nav ul li {
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.validez {
+    background-color: rebeccapurple;
+    color: #f2f2f2;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: medium solid #37b1ab;
+    border-radius: 30px;
+}

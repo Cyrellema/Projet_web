@@ -1,0 +1,28 @@
+   ul {
+       font-size: large;
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+   }
+
+   li {
+       float: left;
+   }
+
+   a {
+       display: block;
+       background-color: rgb(87, 86, 141);
+       color: white;
+       width: 120px;
+       text-align: center;
+       padding: 4px 0px;
+       text-decoration: none;
+
+   }
+
+
+   a:hover,
+   a:active {
+       background-color: rebeccapurple;
+   }

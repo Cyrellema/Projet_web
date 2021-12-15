@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="formulaire.css" />
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <center>
+        <p><b>Login</b></p></br>
+        <div class="login">
+            <form action="login.php" method="post" name="form_register" class="form" id="entry_form"
+                onsubmit="return check()">
+                Username <input type="text" id="id" placeholder="username" name="id"> <br>
+                Password <input type="password" id="pass" placeholder="password" name="pass"><br>
+                <input type="submit" id="entry_btn" value="valider" class="validez">
+            </form>
+        </div>
+    </center>
+    <!-- verifier vide input -->
+    <script type="text/javascript">
+        function checkForm(form) {
+            if (form.id.value == "") {
+                alert("Username can't be empty");
+                form.id.focus();
+                return false;
+            }
+            if (form.pass.value == "") {
+                alert("Password can't be empty");
+                form.pass.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

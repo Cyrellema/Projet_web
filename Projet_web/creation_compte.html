@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulaire.css">
+    <title>creation_compte</title>
+    <style type="text/css">
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 align=center>Créer un compte</h3></br>
+    <div class="creation">
+        <form action="check_compte.php" method="post" name="form_register" class="form" id="entry_form"
+            onsubmit="return check()">
+            Username <input type="text" id="id" placeholder="username" name="id"><br>
+            Password <input type="password" id="pass" placeholder="password" name="pass"><br>
+            <input type="submit" id="entry_btn" value="valider" class="validez">
+        </form>
+    </div>
+
+    <!-- verifier vide input -->
+    <script type="text/javascript">
+        function check() {
+            var id = document.getElementById("id").value;
+            var pass = document.getElementById("pass").value;
+            var regex = /^[/s]+$/;
+            if (regex.test(id) || id.length == 0) {
+                alert("Username can't be empty");
+                return false;
+            }
+            if (regex.test(pass) || pass.length == 0) {
+                alert("Password can't be empty");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
